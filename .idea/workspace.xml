@@ -67,14 +67,8 @@
       <file leaf-file-name="MakeIcons.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MakeIcons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#MakeIcons#0" expanded="true" />
-                <element signature="method#doSaveImage#0;class#MakeIcons#0" expanded="true" />
-                <element signature="method#makeAllPieces#0;class#MakeIcons#0" expanded="true" />
-                <element signature="method#makeSideIcons#0;class#MakeIcons#0" expanded="true" />
-              </folding>
+            <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="3300">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,19 +77,7 @@
         <entry file="file://$PROJECT_DIR$/Pentominos.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="31" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1920">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Pentominos#0" expanded="true" />
-                <element signature="method#main#0;class#Pentominos#0" expanded="true" />
-                <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
-                <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-                <element signature="e#1785#1925#0" expanded="true" />
-                <element signature="e#1913#1914#0" expanded="true" />
-                <element signature="e#2048#2172#0" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
-                <element signature="method#doOtherSize#0;class#Pentominos#0" expanded="true" />
-                <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,17 +85,8 @@
       <file leaf-file-name="PentominosPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="443" column="19" selection-start="19181" selection-end="19181" vertical-scroll-proportion="15.859188" vertical-offset="0" max-vertical-offset="18060">
-              <folding>
-                <element signature="e#3936#5123#0" expanded="true" />
-                <element signature="e#5116#5117#0" expanded="true" />
-                <element signature="e#5169#7659#0" expanded="true" />
-                <element signature="e#7653#7654#0" expanded="true" />
-                <element signature="e#24813#25050#0" expanded="true" />
-                <element signature="e#25032#25033#0" expanded="true" />
-                <element signature="e#26000#26321#0" expanded="true" />
-                <element signature="e#26312#26313#0" expanded="true" />
-              </folding>
+            <state line="443" column="19" selection-start="19181" selection-end="19181" vertical-scroll-proportion="5.5571637" vertical-offset="0" max-vertical-offset="4995">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,18 +94,8 @@
       <file leaf-file-name="PentominosLauncherApplet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PentominosLauncherApplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#PentominosLauncherApplet#0" expanded="true" />
-                <element signature="method#PentominosLauncherApplet#0;class#PentominosLauncherApplet#0" expanded="true" />
-                <element signature="e#497#624#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="method#stop#0;class#PentominosLauncherApplet#0" expanded="true" />
-                <element signature="method#doLaunchButton#0;class#PentominosLauncherApplet#0" expanded="true" />
-                <element signature="method#windowClosed#0;class#980:1384" expanded="true" />
-                <element signature="method#windowOpened#0;class#980:1384" expanded="true" />
-              </folding>
+            <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="915">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,10 +108,8 @@
     </FindUsagesManager>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="22" />
-    <option name="width" value="1276" />
-    <option name="height" value="778" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -178,8 +139,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -471,41 +432,42 @@
       <created>1391208967659</created>
       <updated>1391208967659</updated>
       <workItem from="1391208969847" duration="355000" />
+      <workItem from="1391369761713" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355000" />
+    <option name="totallyTimeSpent" value="363000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1276" height="778" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -533,30 +495,42 @@
     <entry file="file://$PROJECT_DIR$/MakeIcons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#MakeIcons#0" expanded="true" />
-            <element signature="method#doSaveImage#0;class#MakeIcons#0" expanded="true" />
-            <element signature="method#makeAllPieces#0;class#MakeIcons#0" expanded="true" />
-            <element signature="method#makeSideIcons#0;class#MakeIcons#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pentominos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="31" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="443" column="19" selection-start="19181" selection-end="19181" vertical-scroll-proportion="0.0" vertical-offset="4995" max-vertical-offset="5130">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PentominosLauncherApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MakeIcons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PentominosLauncherApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#PentominosLauncherApplet#0" expanded="true" />
-            <element signature="method#PentominosLauncherApplet#0;class#PentominosLauncherApplet#0" expanded="true" />
-            <element signature="e#497#624#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="method#stop#0;class#PentominosLauncherApplet#0" expanded="true" />
-            <element signature="method#doLaunchButton#0;class#PentominosLauncherApplet#0" expanded="true" />
-            <element signature="method#windowClosed#0;class#980:1384" expanded="true" />
-            <element signature="method#windowOpened#0;class#980:1384" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -573,35 +547,14 @@
     <entry file="file://$PROJECT_DIR$/Pentominos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="31" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1920">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Pentominos#0" expanded="true" />
-            <element signature="method#main#0;class#Pentominos#0" expanded="true" />
-            <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
-            <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-            <element signature="e#1785#1925#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#2048#2172#0" expanded="true" />
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="method#doOtherSize#0;class#Pentominos#0" expanded="true" />
-            <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="443" column="19" selection-start="19181" selection-end="19181" vertical-scroll-proportion="15.859188" vertical-offset="0" max-vertical-offset="18060">
-          <folding>
-            <element signature="e#3936#5123#0" expanded="true" />
-            <element signature="e#5116#5117#0" expanded="true" />
-            <element signature="e#5169#7659#0" expanded="true" />
-            <element signature="e#7653#7654#0" expanded="true" />
-            <element signature="e#24813#25050#0" expanded="true" />
-            <element signature="e#25032#25033#0" expanded="true" />
-            <element signature="e#26000#26321#0" expanded="true" />
-            <element signature="e#26312#26313#0" expanded="true" />
-          </folding>
+        <state line="443" column="19" selection-start="19181" selection-end="19181" vertical-scroll-proportion="5.5571637" vertical-offset="0" max-vertical-offset="4995">
+          <folding />
         </state>
       </provider>
     </entry>
