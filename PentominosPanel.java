@@ -299,7 +299,7 @@ public class PentominosPanel extends JPanel {
     * Create a pentominos board with 8 rows and 8 columns.
     */
    public PentominosPanel() {
-      this(8,8,true);
+      this(20,3,true);
    }
    
    /**
@@ -313,9 +313,9 @@ public class PentominosPanel extends JPanel {
       
       rows = rowCt;
       if (rows < 3)
-         rows = 8;
+         rows = 20;
       if (cols < 3)
-         cols = 8;
+         cols = 3;
       cols = colCt;
 
       Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();

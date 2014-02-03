@@ -9,7 +9,7 @@ import java.awt.event.*;
 public class Pentominos extends JFrame {
 
    public static void main(String[] args) {
-      int rows = 8, cols = 8;
+      int rows = 20, cols = 3;
       Pentominos f = new Pentominos("Pentominos",rows, cols);
       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       f.setVisible(true);

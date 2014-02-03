@@ -55,23 +55,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/PentominosPanel.java" line="644" class="PentominosPanel.GameThread" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -90,29 +74,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pentominos.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Pentominos.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pentominos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1290">
+            <state line="11" column="29" selection-start="310" selection-end="310" vertical-scroll-proportion="0.2613391" vertical-offset="44" max-vertical-offset="1290">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Pentominos#0" expanded="true" />
-                <element signature="method#main#0;class#Pentominos#0" expanded="true" />
                 <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
                 <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
                 <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-                <element signature="e#1534#1674#0" expanded="true" />
-                <element signature="e#1662#1663#0" expanded="true" />
+                <element signature="e#1535#1675#0" expanded="true" />
+                <element signature="e#1663#1664#0" expanded="true" />
                 <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PentominosPanel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PentominosPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1092" column="34" selection-start="46923" selection-end="46923" vertical-scroll-proportion="0.93333334" vertical-offset="15960" max-vertical-offset="18150">
+            <state line="317" column="17" selection-start="13861" selection-end="13861" vertical-scroll-proportion="0.0" vertical-offset="17700" max-vertical-offset="18150">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#PentominosPanel#0" expanded="true" />
@@ -124,16 +107,15 @@
                 <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
-                <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
                 <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
-                <element signature="e#24794#25031#0" expanded="true" />
-                <element signature="e#25013#25014#0" expanded="true" />
-                <element signature="e#25981#26302#0" expanded="true" />
-                <element signature="e#26293#26294#0" expanded="true" />
+                <element signature="e#24796#25033#0" expanded="true" />
+                <element signature="e#25015#25016#0" expanded="true" />
+                <element signature="e#25983#26304#0" expanded="true" />
+                <element signature="e#26295#26296#0" expanded="true" />
                 <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
@@ -146,6 +128,7 @@
                 <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="method#setMessage#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
                 <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,8 +163,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Pentominos.java" />
         <option value="$PROJECT_DIR$/PentominosPanel.java" />
+        <option value="$PROJECT_DIR$/Pentominos.java" />
       </list>
     </option>
   </component>
@@ -517,7 +500,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10318000" />
+    <option name="totallyTimeSpent" value="10439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -543,7 +526,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32739726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32739726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -585,12 +568,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Pentominos#0" expanded="true" />
-            <element signature="method#main#0;class#Pentominos#0" expanded="true" />
             <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
             <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
             <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-            <element signature="e#1534#1674#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
+            <element signature="e#1535#1675#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
             <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
           </folding>
         </state>
@@ -610,16 +592,15 @@
             <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
-            <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
-            <element signature="e#24794#25031#0" expanded="true" />
-            <element signature="e#25013#25014#0" expanded="true" />
-            <element signature="e#25981#26302#0" expanded="true" />
-            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="e#24796#25033#0" expanded="true" />
+            <element signature="e#25015#25016#0" expanded="true" />
+            <element signature="e#25983#26304#0" expanded="true" />
+            <element signature="e#26295#26296#0" expanded="true" />
             <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
@@ -632,6 +613,7 @@
             <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#setMessage#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -666,12 +648,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Pentominos#0" expanded="true" />
-            <element signature="method#main#0;class#Pentominos#0" expanded="true" />
             <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
             <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
             <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-            <element signature="e#1534#1674#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
+            <element signature="e#1535#1675#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
             <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
           </folding>
         </state>
@@ -691,16 +672,15 @@
             <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
-            <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
-            <element signature="e#24794#25031#0" expanded="true" />
-            <element signature="e#25013#25014#0" expanded="true" />
-            <element signature="e#25981#26302#0" expanded="true" />
-            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="e#24796#25033#0" expanded="true" />
+            <element signature="e#25015#25016#0" expanded="true" />
+            <element signature="e#25983#26304#0" expanded="true" />
+            <element signature="e#26295#26296#0" expanded="true" />
             <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
@@ -713,6 +693,7 @@
             <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#setMessage#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,26 +749,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pentominos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1290">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Pentominos#0" expanded="true" />
-            <element signature="method#main#0;class#Pentominos#0" expanded="true" />
-            <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
-            <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
-            <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-            <element signature="e#1534#1674#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1092" column="34" selection-start="46923" selection-end="46923" vertical-scroll-proportion="0.93333334" vertical-offset="15960" max-vertical-offset="18150">
+        <state line="317" column="17" selection-start="13861" selection-end="13861" vertical-scroll-proportion="0.0" vertical-offset="17700" max-vertical-offset="18150">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#PentominosPanel#0" expanded="true" />
@@ -799,16 +763,15 @@
             <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
-            <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
-            <element signature="e#24794#25031#0" expanded="true" />
-            <element signature="e#25013#25014#0" expanded="true" />
-            <element signature="e#25981#26302#0" expanded="true" />
-            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="e#24796#25033#0" expanded="true" />
+            <element signature="e#25015#25016#0" expanded="true" />
+            <element signature="e#25983#26304#0" expanded="true" />
+            <element signature="e#26295#26296#0" expanded="true" />
             <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
@@ -821,6 +784,23 @@
             <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
             <element signature="method#setMessage#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
             <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pentominos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="310" selection-end="310" vertical-scroll-proportion="0.2613391" vertical-offset="44" max-vertical-offset="1290">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Pentominos#0" expanded="true" />
+            <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
+            <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
+            <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
+            <element signature="e#1535#1675#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
           </folding>
         </state>
       </provider>
