@@ -31,17 +31,17 @@ import javax.swing.*;
  */
 public class PentominosPanel extends JPanel {
    
-   private MosaicPanel board;  // for displaying the board on the screen
+   private MosaicPanel board;  // для отображения доски с паззлами на экране
    
-   private JLabel comment;   // status comment displayed under the board
+   private JLabel comment;   // отображение статуса внизу окна под доской
    
-   private boolean[] used = new boolean[13];  //  used[i] tells whether piece # i is already on the board
+   private boolean[] used = new boolean[13];  //  used[i] указывает если паззл № i уже на доске
+
+   private int numused;     // количество паззлов используемых на доске (12)
    
-   private int numused;     // number of pieces currently on the board, from 0 to 12
-   
-   private GameThread gameThread = null;   // a thread to run the puzzle solving procedure
-   
-   private JMenuItem restartAction,restartClearAction,restartRandomAction;  // Menu items for user commands
+   private GameThread gameThread = null;   // поток в котором решается головоломка с паззлами
+
+   private JMenuItem restartAction,restartClearAction,restartRandomAction;  // Пользовательские комманды
     private JMenuItem goAction,pauseAction,stepAction,saveAction,quitAction; 
     private JMenuItem oneSidedAction;
     private JCheckBoxMenuItem randomizePiecesChoice, checkForBlocksChoice, symmetryCheckChoice;
@@ -629,43 +629,46 @@ public class PentominosPanel extends JPanel {
    
 
    
-   private class GameThread extends Thread {  // This represents the thread that solves the puzzle.
+   private class GameThread extends Thread {  // Этот класс запускается в потоке и решает головоломку
 
-      int moveCount;        // How many pieces have been placed so far
-      int movesSinceCheck;  // How many moves since the last time the board was redrawn, while running at speed #1
-      int solutionCount;    // How many solutions have been found so far
+      int moveCount;        // Сколько ходов сделано
+      int movesSinceCheck;  // Сколько ходов прошло с момента последней перерисовки доски
+      int solutionCount;    // Сколько было найдено решений
 
-      volatile boolean running;   // True when the solution process is running (and not when it is paused)
+      volatile boolean running;   // True когда процесс запущен и работает (и False когда приостановлен)
 
-      boolean aborted;  // used in play() to test whether the solution process has been aborted by a "restart"
-      
-      volatile int message = 0;  // "message" is used by user-interface thread to send control messages
-                                           // to the game-playing thread.  A value of  0 indicates "no message"
-      
-      int[][] pieces;  // The pieces, either a direct copy of pieces_data, or a copy with order randomized
+      boolean aborted;  // используется в play() для проверки на прекращение процесса вообще
 
-      volatile boolean randomizePieces;  // If true, the pieces array is put into random order at start of play.
-      volatile boolean checkForBlocks;   // If true, a check is made for obvious blocking.
-      volatile boolean symmetryCheck;    // If true, the symmetry of the board is checked, and if it has any symmetry,
+      volatile int message = 0;  // используется потоком интерфейсной части для управление потоком решающим головоломку
+      // 0 - это отсутсвие сообщений
+
+      int[][] pieces;  // Паззлы, изначальная копия полного набора паззлов (может быть со случайным порядком)
+
+      volatile boolean randomizePieces;  // If true, паззлы на начало решения находятся в случайном порядке
+      volatile boolean checkForBlocks;   // If true, проверяет на очевидные тупики (блоки)
+      volatile boolean symmetryCheck;    // If true, тогда доска проверяется на симметричность в решениях,
+       // тоесть из списка удаляются некоторые паззлы, что бы избежать
+      // the symmetry of the board is checked, and if it has any symmetry,
                                          // some pieces are removed from the list to avoid redundant solutions.
       volatile boolean useOneSidedPieces;// If true, only one side of two-sided pieces is used.
       
        volatile boolean[] useSideA;  // When useOneSidedPieces, this array tells which side to use for each two-sided piece.
                                      // The data for the two sides of each piece is stored in side_info.
       
-      int[][] blockCheck;  // Used for checking for blocking.
-      int blockCheckCt;  // Number of times block check has been run -- used in controling recursive counting instead of just using a boolean array.
-      int emptySpaces; // spareSpaces - (number of black spaces); number of spaces that will be empty in a solution
-      
-      int squaresLeftEmpty;  // squares actually left empty in the solution so far
-      
-      boolean putPiece(int p, int row, int col) {  // try to place a piece on the board, return true if it fits
+      int[][] blockCheck; // используется для отмечания блокировок (собственных)
+      int blockCheckCt;  // количество проверок блокировки -- используется для контроля рекурсивного подсчета
+      // вместо банального использования булевого массива.
+      int emptySpaces; // черные квадраты пустые, если используется
+
+      int squaresLeftEmpty;  // квадраты которые еще остались не заполненными в решении
+
+      boolean putPiece(int p, int row, int col) {  // пробуем вставить паззл на доску, возвращает True если подходит
          if (board.getColor(row,col) != null)
             return false;
          for (int i = 1; i < 8; i += 2) {
             if (row+pieces[p][i] < 0 || row+pieces[p][i] >= rows || col+pieces[p][i+1] < 0 || col+pieces[p][i+1] >= cols)
                return false;
-            else if (board.getColor(row+pieces[p][i],col+pieces[p][i+1]) != null)  // one of the squares needed is already occupied
+            else if (board.getColor(row+pieces[p][i],col+pieces[p][i+1]) != null)  // один из нужных квадратов уже занят
                return false;
          }
          board.setColor(row,col,pieceColor[pieces[p][0]]);
@@ -674,17 +677,16 @@ public class PentominosPanel extends JPanel {
          return true;
       }
       
-      void removePiece(int p, int row, int col) { // Remove piece p from the board, at position (row,col)
+      void removePiece(int p, int row, int col) { // удаляем паззл p, с позиции (row, col)
          board.setColor(row,col,null);
          for (int i = 1; i < 9; i += 2) {
             board.setColor(row + pieces[p][i], col + pieces[p][i+1], null);
          }
       }
       
-      void play(int row, int col) {   // recursive procedure that tries to solve the puzzle
-         // parameter "square" is the number of the next empty
-         // to be filled.  This is only complicated beacuse all
-         // the details of speed/pause/step are handled here.
+      void play(int row, int col) {
+         // рекурсивная функция которая пытается решить головоломку
+         // усложнено только взаимодействием с интерфейсной частью напрямую
          for (int p=0; p<pieces.length; p++) {
             if (!aborted && (used[pieces[p][0]] == false)) {
                if (!putPiece(p,row,col))
@@ -693,12 +695,12 @@ public class PentominosPanel extends JPanel {
                   removePiece(p,row,col);
                   continue;
                }
-               used[pieces[p][0]] = true;  // stop this piece from being used again on the board
+               used[pieces[p][0]] = true;  // обозначаем паззл, что бы больше его не использовать
                numused++;
                moveCount++;
                movesSinceCheck++;
                boolean stepping = false;
-               if (message > 0) {  // test for "messages" generated by user actions
+               if (message > 0) {  // смотрим, были ли указания от интерфейсной части
                   if (message == PAUSE_MESSAGE || message == STEP_MESSAGE) {
                      stepping = true;
                      if (running && delay == 0)
@@ -709,9 +711,9 @@ public class PentominosPanel extends JPanel {
                   }
                   else if (message >=  RESTART_MESSAGE) {
                      aborted = true;
-                     return;  // note: don't setMessage(0), since run() has to handle message
+                     return;  // заметка: не устанавливать setMessage(0), так как run() должен разруливать сообщение
                   }
-                  else { // go message
+                  else { // сообщение к старту
                      running = true;
                      saveAction.setEnabled(false);
                      board.setAutopaint( selectedSpeed > 1 );
@@ -719,13 +721,13 @@ public class PentominosPanel extends JPanel {
                      setMessage(0);
                   }
                }
-               if (numused == piecesNeeded) {  // puzzle is solved
+               if (numused == piecesNeeded) {  // головоломка решена
                   solutionCount++;
                   if (delay == 0)
-                     board.forceRedraw();  // board.autopaint is off in this case, so force board to be shown on screen
+                     board.forceRedraw();  // board.autopaint выключен в этом случае, поэтому нужно форсировать перерисовку
                   if (selectedSpeed == 0) {
                      comment.setText("Solution #" + solutionCount + "...  (" + moveCount + " moves)");
-                     doDelay(50);  // In speed 0, just stop briefly when a solution is found.
+                     doDelay(50);  // На скорости 0, просто короткая остановка, когда решение найдено.
                   }
                   else {
                      stepAction.setEnabled(true);
@@ -733,7 +735,8 @@ public class PentominosPanel extends JPanel {
                      running = false;
                      saveAction.setEnabled(true);
                      comment.setText("Solution #" + solutionCount + "  (" + moveCount + " moves)");
-                     doDelay(-1);  // wait indefinitely for user command to restart solution, step, etc.
+                     doDelay(-1);  // неопределенно длительная остановка для пользовательской команды для
+                     // перезапуска решения, шага, и другое.
                      running = true;
                      board.setAutopaint( selectedSpeed > 1 );
                      saveAction.setEnabled(false);
@@ -741,63 +744,64 @@ public class PentominosPanel extends JPanel {
                   }
                }
                else {
-                  if (stepping) {  // pause after placing a piece
+                  if (stepping) {  // пауза после вставки паззла
                      comment.setText("Paused.");
                      if (delay == 0)
                         board.forceRedraw();
-                     doDelay(-1);  // wait indefinitly for command
+                     doDelay(-1);  // ждать неопределенно долго до появления команды
                   }
                   else if (delay > 0)
                      doDelay(delay);
                   if (movesSinceCheck >= 1000 && !stepping) {
                      if (selectedSpeed == 1) {
-                        board.forceRedraw();  // At speed 1, board.autopaint is false; force a redraw every 1000 moves
+                        board.forceRedraw();
                         doDelay(20);
                      }
                      movesSinceCheck = 0;
                   }
-                  int nextRow = row;  // find next empty space, going left-to-right then top-to-bottom
+                  int nextRow = row;  // поиск следующего пустого места, слева на право, а потом сверху вниз
                   int nextCol = col;
-                  while (board.getColor(nextRow,nextCol) != null) { // find next empty square
+                  while (board.getColor(nextRow,nextCol) != null) { // найти следующее пустое место
                      nextCol++;
                      if (nextCol == cols) {
                         nextCol = 0;
                         nextRow++;
-                        if (nextRow == row)  // We've gone beyond the end of the board!
+                        if (nextRow == row)  // выход за пределы доски
                            throw new IllegalStateException("Internal Error -- moved beyond end of board!");
                      }
                   }
-                  play(nextRow, nextCol);  // and try to complete the solution
+                  play(nextRow, nextCol);  // попытка закончить решение
                   if (aborted)
                      return;
                }
-               removePiece(p,row,col);  // backtrack
+               removePiece(p,row,col);  // [backtrack] обратный ход
                numused--;
                used[pieces[p][0]] = false;
             }
          }
-         // Can't play a piece at (row.col), but maybe can leave it empty
-         if (squaresLeftEmpty < emptySpaces) { 
+         // Нельзя установить паззл на позицию (row,col), может оставим пустыми
+         if (squaresLeftEmpty < emptySpaces) {
             if (aborted)
                return;
             squaresLeftEmpty++;
-            int nextRow = row;  // find next empty space, going left-to-right then top-to-bottom
+            int nextRow = row;  // поиск следующего пустого места, слева на право, а потом сверху вниз
             int nextCol = col;
-            do { // find next empty square
+            do { // найти следующий пустой квадрат
                nextCol++;
                if (nextCol == cols) {
                   nextCol = 0;
                   nextRow++;
-                  if (nextRow == row)  // We've gone beyond the end of the board!
+                  if (nextRow == row)  // вышли за границы доски
                      return;
                }
             } while (board.getColor(nextRow,nextCol) != null);
-            play(nextRow, nextCol);  // and try to complete the solution
+            play(nextRow, nextCol);  // пытаемся завершить решение
             squaresLeftEmpty--;
          }
       }
       
-      boolean obviousBlockExists() { // Check whether the board has a region that can never be filled because of the number of squares it contains.
+      boolean obviousBlockExists() { // проверка на то что доска имеет участок который никогда не будет заполнен изза
+          // количества квадратов в нем
          blockCheckCt++;
          int forcedEmptyCt = 0;
          for (int r = 0; r < rows; r++)
@@ -812,7 +816,7 @@ public class PentominosPanel extends JPanel {
          return false;
       }
       
-      int countEmptyBlock(int r, int c) {  // Find the size of one empty region on the board; recursive routine called by obviousBlockExists.
+      int countEmptyBlock(int r, int c) {  // найти размер пустого региона на доске, рекурсивный от obviousBlockExists
          if (blockCheck[r][c] == blockCheckCt || board.getColor(r,c) != null)
             return 0;
          int c1 = c, c2 = c;
@@ -832,17 +836,17 @@ public class PentominosPanel extends JPanel {
          return ct;
       }
       
-      void setUpRandomBoard() { // Set up a random board, that is, select at random the squares that will be left empty
+      void setUpRandomBoard() { // установить случайную доску, (случайное размещение черных квадратов, тоесть пустых)
          clickCt = spareSpaces;
          board.clear();
          creatingBoard = false;
          if (spareSpaces == 0)
-            return;  // the pieces will entirely fill the board, so there are no empty spaces to choose.
+            return;  // паззлы заполнят доску полностью, тоесть не будет пустых мест
          int x,y;
          int placed = 0;
          int choice = (int)(3*Math.random());
          switch (choice) {
-         case 0: // totally random
+         case 0: // полностью случайно
             for (int i=0; i < spareSpaces; i ++) {
                do {
                   x = (int)(cols*Math.random());
@@ -851,7 +855,7 @@ public class PentominosPanel extends JPanel {
                board.setColor(y,x,emptyColor);
             }
             break;
-         case 1: // Symmetric random
+         case 1: // симметрически случайно
             while (placed < spareSpaces) {
                x = (int)(cols*Math.random());
                y = (int)(rows*Math.random());
@@ -873,7 +877,7 @@ public class PentominosPanel extends JPanel {
                }
             }
             break;
-         default: // random block
+         default: // случайный блок
             int blockrows;
          int blockcols;
          if (spareSpaces < 4) {
@@ -903,7 +907,7 @@ public class PentominosPanel extends JPanel {
          }
       }
       
-      private int checkSymmetries(boolean allowFlip) {  // Return a code for the type of symmetry displayed by the board.
+      private int checkSymmetries(boolean allowFlip) {  //вернуть код типа симметрии для доски
          boolean H, V, D1, D2, R90, R180;
          boolean[][] empty = new boolean[rows][cols];
          for (int i = 0; i < rows; i++)
@@ -931,7 +935,8 @@ public class PentominosPanel extends JPanel {
                      break R90LOOP;
                   }
          }
-         if (R90) { // If symmetric under 90-degree rotation, only possibiliites are 8-way or pure rotational symmetry
+         if (R90) { // если симметрично для поворота на 90-градусов, только возможности 8-кратного поворота
+         // или полностью вращаемая симметрия
             if (V)
                return SYMMETRY_ALL;
             else
@@ -973,13 +978,13 @@ public class PentominosPanel extends JPanel {
                      break D2LOOP;
                   }
          }
-         if (D1) { // can't also have H or V, since then R90 would be true
+         if (D1) { // не может иметь H или V, так как R90 = true
             if (D2)
                return SYMMETRY_D1D2;
             else
                return SYMMETRY_D1;
          }
-         else if (H) { // can't also have D2, since then R90 would be true
+         else if (H) { // не может иметь D2, так как R90 = true
             if (V)
                return SYMMETRY_HV;
             else
@@ -996,8 +1001,8 @@ public class PentominosPanel extends JPanel {
       }
       
       synchronized void doDelay(int milliseconds) {
-         // wait for specified time, or until a control message is sent using setMessage()
-         // is generated.  For an indefinite wait, milliseconds should be < 0
+          // ожидает указанное время, или пока не прервет управляющее сообщение присланное через setMessage()
+          // для неопределенно длительного ожидания < 0
          if (milliseconds < 0) {
             try {
                wait();
@@ -1015,15 +1020,15 @@ public class PentominosPanel extends JPanel {
       }
       
       
-      synchronized void setMessage(int message) {  // send control message to game thread
+      synchronized void setMessage(int message) {  // отправить сообщение в GameThread
          this.message = message;
          if (message > 0)
-            notify();  // wake game thread if it is sleeping or waiting for a message (in the doDelay method)
+            notify();  // разбедить GameThread если он спит или ожидает сообщения (в doDelay)
       }
 
       
       /**
-       * The run method for the thread that runs the game.
+       * Запускает игру
        */
       public void run() { 
          while (true) {
@@ -1031,13 +1036,14 @@ public class PentominosPanel extends JPanel {
                running = false;
                saveAction.setEnabled(true);
                board.repaint();
-               while (message != GO_MESSAGE && message != TERMINATE_MESSAGE) {  // wait for game setup
+               while (message != GO_MESSAGE && message != TERMINATE_MESSAGE) {
+               // ждем пока установятся настройки программы
                   if (message == RESTART_RANDOM_MESSAGE) {
                      setUpRandomBoard();
                      comment.setText("Solving...");
                      creatingBoard = false;
                      setMessage(GO_MESSAGE);
-                     doDelay(1000);  // give user a chance to change selection
+                     doDelay(1000);
                   }
                   else if (message == RESTART_CLEAR_MESSAGE || message == RESTART_MESSAGE) {
                      clickCt = 0;
@@ -1062,7 +1068,7 @@ public class PentominosPanel extends JPanel {
                            comment.setText("Use \"Go\" to Start");
                      }
                      setMessage(0);
-                     doDelay(-1);  // wait forever (for control message to start game)
+                     doDelay(-1);  // ждать навсегда (для управлением старта программы)
                   }
                }
                if (message == TERMINATE_MESSAGE)
@@ -1081,7 +1087,7 @@ public class PentominosPanel extends JPanel {
                for (int i=1; i<=12; i++)
                   used[i] = false;
                numused = 0;
-               int startRow = 0;  // reprsents the upper left corner of the board
+               int startRow = 0;  // левый верхний угол
                int startCol = 0;
                while (board.getColor(startRow,startCol) != null) {
                   startCol++;  // move past any filled squares, since Play(square) assumes the square is empty
@@ -1096,7 +1102,7 @@ public class PentominosPanel extends JPanel {
                   long removeMask = 0;
                   if (symmetryCheck) {
                      int symmetryType = checkSymmetries(!useOneSidedPieces);
-                     //System.out.println("Found symmetry type " + symmetryType);
+                     System.out.println("Found symmetry type " + symmetryType);
                      if (symmetryType != SYMMETRY_NONE) {
                         for (int p = 0; p < remove_for_symmetry[symmetryType].length; p++)
                            removeMask = removeMask | (1L << remove_for_symmetry[symmetryType][p]);
@@ -1116,18 +1122,18 @@ public class PentominosPanel extends JPanel {
                            ct++;
                      pieces2use = new int[63-ct][];
                      int j = 0;
-                     //System.out.print("Remove piece ");
+                     System.out.print("Remove piece ");
                      for (int p = 0; p < piece_data.length; p++)
                         if ((removeMask & (1L << p)) == 0)
                            pieces2use[j++] = piece_data[p];
-                        //else 
-                        //   System.out.print(p + " ");
-                     //System.out.println("\n");
+                        else
+                           System.out.print(p + " ");
+                     System.out.println("\n");
                   }
                }
                pieces = pieces2use;
                if (randomizePieces) {
-                  if (pieces2use == piece_data) {  // Don't mess with ordering in the primary piece_data array
+                  if (pieces2use == piece_data) {  // Не мешать порядок паззлов в исходном массиве
                      pieces = new int[pieces2use.length][];
                      for (int i = 0; i < pieces.length; i++)
                         pieces[i] = pieces2use[i];

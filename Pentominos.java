@@ -9,15 +9,7 @@ import java.awt.event.*;
 public class Pentominos extends JFrame {
 
    public static void main(String[] args) {
-      int rows, cols;
-      try {
-         rows = Integer.parseInt(args[0]);
-         cols = Integer.parseInt(args[1]);
-      }
-      catch (Exception e) {
-         rows = 8;
-         cols = 8;
-      }
+      int rows = 8, cols = 8;
       Pentominos f = new Pentominos("Pentominos",rows, cols);
       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       f.setVisible(true);
@@ -43,10 +35,7 @@ public class Pentominos extends JFrame {
       setLocation( (screensize.width - getWidth())/2, (screensize.height - getHeight())/2 );
    }
    
-   private static int[][] sizeChoices = {
-      {8,8}, {10,6}, {12,5}, {15,4}, {20,3},
-      {8,9}, {11,6}, {13,5}, {16,4}
-   };
+   private static int[][] sizeChoices = {{20,3}};
    
    private JMenu makeSizeMenu() {
       JMenu size = new JMenu("Size");
@@ -61,39 +50,8 @@ public class Pentominos extends JFrame {
          });
          size.add(item);
       }
-      JMenuItem other = new JMenuItem("Custom Size...");
-      other.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent evt) {
-            doOtherSize();
-         }
-      });
-      size.addSeparator();
-      size.add(other);
+
       return size;
-   }
-   
-   private void doOtherSize() {
-      JPanel p = new JPanel();
-      p.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
-      p.setLayout(new GridLayout(2,2,10,10));
-      JComboBox rowChoice = new JComboBox();
-      JComboBox columnChoice = new JComboBox();
-      for (int i = 3; i <= 21; i++) {
-         String s = "" + i;
-         rowChoice.addItem(s);
-         columnChoice.addItem(s);
-      }
-      rowChoice.setSelectedIndex(5);
-      columnChoice.setSelectedIndex(5);
-      p.add( new JLabel("Rows:", JLabel.RIGHT) );
-      p.add(rowChoice);
-      p.add( new JLabel("Columns:", JLabel.RIGHT) );
-      p.add(columnChoice);
-      if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(panel,p,"Select Size",JOptionPane.OK_CANCEL_OPTION)) {
-         int r= rowChoice.getSelectedIndex() + 3;
-         int c = columnChoice.getSelectedIndex() + 3;
-         setBoardSize(r,c);
-      }
    }
    
    private void setBoardSize(int rows, int cols) {

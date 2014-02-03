@@ -55,6 +55,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/PentominosPanel.java" line="644" class="PentominosPanel.GameThread" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -67,14 +84,8 @@
       <file leaf-file-name="MakeIcons.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MakeIcons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#MakeIcons#0" expanded="true" />
-                <element signature="method#doSaveImage#0;class#MakeIcons#0" expanded="true" />
-                <element signature="method#makeAllPieces#0;class#MakeIcons#0" expanded="true" />
-                <element signature="method#makeSideIcons#0;class#MakeIcons#0" expanded="true" />
-              </folding>
+            <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="1064" max-vertical-offset="1755">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,7 +93,7 @@
       <file leaf-file-name="Pentominos.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pentominos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="41" selection-start="2248" selection-end="2248" vertical-scroll-proportion="0.44358578" vertical-offset="793" max-vertical-offset="1920">
+            <state line="45" column="47" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.19318181" vertical-offset="539" max-vertical-offset="1410">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Pentominos#0" expanded="true" />
@@ -90,11 +101,8 @@
                 <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
                 <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
                 <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-                <element signature="e#1785#1925#0" expanded="true" />
-                <element signature="e#1913#1914#0" expanded="true" />
-                <element signature="e#2048#2172#0" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
-                <element signature="method#doOtherSize#0;class#Pentominos#0" expanded="true" />
+                <element signature="e#1706#1846#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
                 <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
               </folding>
             </state>
@@ -104,16 +112,40 @@
       <file leaf-file-name="PentominosPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="13" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0" vertical-offset="17413" max-vertical-offset="18060">
+            <state line="1019" column="54" selection-start="44047" selection-end="44047" vertical-scroll-proportion="0.0" vertical-offset="15060" max-vertical-offset="18105">
               <folding>
-                <element signature="e#3936#5123#0" expanded="true" />
-                <element signature="e#5116#5117#0" expanded="true" />
-                <element signature="e#5169#7659#0" expanded="true" />
-                <element signature="e#7653#7654#0" expanded="true" />
-                <element signature="e#24813#25050#0" expanded="true" />
-                <element signature="e#25032#25033#0" expanded="true" />
-                <element signature="e#26000#26321#0" expanded="true" />
-                <element signature="e#26312#26313#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#PentominosPanel#0" expanded="true" />
+                <element signature="e#3917#5104#0" expanded="true" />
+                <element signature="e#5097#5098#0" expanded="true" />
+                <element signature="e#5150#7640#0" expanded="true" />
+                <element signature="e#7634#7635#0" expanded="true" />
+                <element signature="docComment;field#piece_data#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+                <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="e#24794#25031#0" expanded="true" />
+                <element signature="e#25013#25014#0" expanded="true" />
+                <element signature="e#25981#26302#0" expanded="true" />
+                <element signature="e#26293#26294#0" expanded="true" />
+                <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#removePiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#play#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#obviousBlockExists#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#countEmptyBlock#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#setUpRandomBoard#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#checkSymmetries#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+                <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,7 +154,7 @@
       <file leaf-file-name="PentominosLauncherApplet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PentominosLauncherApplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+            <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="915">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#PentominosLauncherApplet#0" expanded="true" />
@@ -145,11 +177,17 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/PentominosPanel.java" />
+        <option value="$PROJECT_DIR$/Pentominos.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="22" />
-    <option name="width" value="1276" />
-    <option name="height" value="778" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -179,7 +217,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -201,6 +238,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,6 +254,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager" selected="Application.Pentominos">
     <configuration default="false" name="Pentominos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -470,41 +510,44 @@
       <changelist id="5d3669d3-37fe-4ae2-a33f-0b7aa3081cd7" name="Default" comment="" />
       <created>1391208967659</created>
       <updated>1391208967659</updated>
-      <workItem from="1391208969847" duration="149000" />
+      <workItem from="1391208969847" duration="355000" />
+      <workItem from="1391369761713" duration="1172000" />
+      <workItem from="1391374494496" duration="1295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149000" />
+    <option name="totallyTimeSpent" value="2822000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1276" height="778" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -524,32 +567,226 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MakeIcons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pentominos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="31" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1920">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#MakeIcons#0" expanded="true" />
-            <element signature="method#doSaveImage#0;class#MakeIcons#0" expanded="true" />
-            <element signature="method#makeAllPieces#0;class#MakeIcons#0" expanded="true" />
-            <element signature="method#makeSideIcons#0;class#MakeIcons#0" expanded="true" />
+            <element signature="docComment;class#Pentominos#0" expanded="true" />
+            <element signature="method#main#0;class#Pentominos#0" expanded="true" />
+            <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
+            <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
+            <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
+            <element signature="e#1706#1846#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0" vertical-offset="17413" max-vertical-offset="18060">
+        <state line="648" column="14" selection-start="28524" selection-end="28532" vertical-scroll-proportion="0.0" vertical-offset="5025" max-vertical-offset="7485">
           <folding>
-            <element signature="e#3936#5123#0" expanded="true" />
-            <element signature="e#5116#5117#0" expanded="true" />
-            <element signature="e#5169#7659#0" expanded="true" />
-            <element signature="e#7653#7654#0" expanded="true" />
-            <element signature="e#24813#25050#0" expanded="true" />
-            <element signature="e#25032#25033#0" expanded="true" />
-            <element signature="e#26000#26321#0" expanded="true" />
-            <element signature="e#26312#26313#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#PentominosPanel#0" expanded="true" />
+            <element signature="e#3917#5104#0" expanded="true" />
+            <element signature="e#5097#5098#0" expanded="true" />
+            <element signature="e#5150#7640#0" expanded="true" />
+            <element signature="e#7634#7635#0" expanded="true" />
+            <element signature="docComment;field#piece_data#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="e#24794#25031#0" expanded="true" />
+            <element signature="e#25013#25014#0" expanded="true" />
+            <element signature="e#25981#26302#0" expanded="true" />
+            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#removePiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#play#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#obviousBlockExists#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#countEmptyBlock#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#setUpRandomBoard#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#checkSymmetries#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PentominosLauncherApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="915">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="method#PentominosLauncherApplet#0;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="e#497#624#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="method#stop#0;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="method#doLaunchButton#0;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="method#windowClosed#0;class#980:1384" expanded="true" />
+            <element signature="method#windowOpened#0;class#980:1384" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MakeIcons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pentominos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="31" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1920">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Pentominos#0" expanded="true" />
+            <element signature="method#main#0;class#Pentominos#0" expanded="true" />
+            <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
+            <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
+            <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
+            <element signature="e#1706#1846#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="443" column="19" selection-start="19181" selection-end="19181" vertical-scroll-proportion="0.0" vertical-offset="4995" max-vertical-offset="5130">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#PentominosPanel#0" expanded="true" />
+            <element signature="e#3917#5104#0" expanded="true" />
+            <element signature="e#5097#5098#0" expanded="true" />
+            <element signature="e#5150#7640#0" expanded="true" />
+            <element signature="e#7634#7635#0" expanded="true" />
+            <element signature="docComment;field#piece_data#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="e#24794#25031#0" expanded="true" />
+            <element signature="e#25013#25014#0" expanded="true" />
+            <element signature="e#25981#26302#0" expanded="true" />
+            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#removePiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#play#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#obviousBlockExists#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#countEmptyBlock#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#setUpRandomBoard#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#checkSymmetries#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PentominosLauncherApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="915">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="method#PentominosLauncherApplet#0;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="e#497#624#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="method#stop#0;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="method#doLaunchButton#0;class#PentominosLauncherApplet#0" expanded="true" />
+            <element signature="method#windowClosed#0;class#980:1384" expanded="true" />
+            <element signature="method#windowOpened#0;class#980:1384" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_39-b04-443.jdk/Contents/Home/src.jar!/src/java/awt/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="841" column="16" selection-start="30530" selection-end="30540" vertical-scroll-proportion="5.4375" vertical-offset="501" max-vertical-offset="9270">
+          <folding>
+            <element signature="method#pack#0;class#Window#0" expanded="false" />
+            <element signature="method#setVisible#0;class#Window#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MakeIcons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="7" selection-start="7656" selection-end="7656" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PentominosPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1019" column="54" selection-start="44047" selection-end="44047" vertical-scroll-proportion="0.0" vertical-offset="15060" max-vertical-offset="18105">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#PentominosPanel#0" expanded="true" />
+            <element signature="e#3917#5104#0" expanded="true" />
+            <element signature="e#5097#5098#0" expanded="true" />
+            <element signature="e#5150#7640#0" expanded="true" />
+            <element signature="e#7634#7635#0" expanded="true" />
+            <element signature="docComment;field#piece_data#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#PentominosPanel#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#PentominosPanel#1;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#getMenuBar#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doSaveImage#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doOneSidedCommand#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="e#24794#25031#0" expanded="true" />
+            <element signature="e#25013#25014#0" expanded="true" />
+            <element signature="e#25981#26302#0" expanded="true" />
+            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="docComment;method#terminate#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#terminate#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#putPiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#removePiece#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#play#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#obviousBlockExists#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#countEmptyBlock#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#setUpRandomBoard#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#checkSymmetries#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#doDelay#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="docComment;method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
+            <element signature="method#run#0;class#GameThread#0;class#PentominosPanel#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -573,7 +810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pentominos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="41" selection-start="2248" selection-end="2248" vertical-scroll-proportion="0.44358578" vertical-offset="793" max-vertical-offset="1920">
+        <state line="45" column="47" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.19318181" vertical-offset="539" max-vertical-offset="1410">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Pentominos#0" expanded="true" />
@@ -581,11 +818,8 @@
             <element signature="method#Pentominos#0;class#Pentominos#0" expanded="true" />
             <element signature="method#Pentominos#1;class#Pentominos#0" expanded="true" />
             <element signature="method#makeSizeMenu#0;class#Pentominos#0" expanded="true" />
-            <element signature="e#1785#1925#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#2048#2172#0" expanded="true" />
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="method#doOtherSize#0;class#Pentominos#0" expanded="true" />
+            <element signature="e#1706#1846#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
             <element signature="method#setBoardSize#0;class#Pentominos#0" expanded="true" />
           </folding>
         </state>
